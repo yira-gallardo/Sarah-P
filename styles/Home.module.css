@@ -1,44 +1,19 @@
-.header {
-  background-image: url(/img/sara.jpg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
+.heading {
+  margin-bottom: 20px;
 }
-.header h1 {
-  font-size: 8em;
-  font-family: "Rozha One", serif;
-  color: #a38e63;
-  margin: 0;
-  padding: 0;
-  line-height: 0.8em;
-}
-.header h2 {
+.heading h2 {
   font-size: 4em;
-  font-family: "Rozha One", serif;
-  margin: 0;
-  padding: 0;
+  color: #a38e63;
+  font-family: "Playfair Display", serif;
 }
 
-.header .content {
-  margin-top: 16em;
-}
-.header .icon svg {
-  cursor: pointer;
-  fill: white;
-}
 .navDesktop {
   text-align: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 999;
 }
 .navDesktop .link {
   text-decoration: none;
@@ -48,20 +23,51 @@
   padding: 0px;
   margin: 0px 20px;
   font-family: "din";
-  font-size: 15px;
+  font-size: 1.2em;
   letter-spacing: 2px;
   color: #a38e63;
   line-height: 70px;
   cursor: pointer;
+  font-family: "Playfair Display", serif;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.header h1 {
+  font-size: 8em;
+  font-family: "Playfair Display", serif;
+  color: #a38e63;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+}
+.header h2 {
+  font-size: 4em;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+}
+.header .content {
+  margin-bottom: 2em;
+}
+.header .icon svg {
+  cursor: pointer;
+  fill: white;
+}
+.header .icon {
+  margin-bottom: 2em;
+}
+
 .bio {
-  background-image: url(/img/sarah.jpeg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
   color: white;
   min-height: 100vh;
-  padding: 80px 0;
 }
 .bio .title {
   color: #a38e63;
@@ -70,22 +76,23 @@
   font-size: 20px;
   margin-bottom: 40px;
 }
-.bioBox {
-  width: 300px;
+.bio .bioBox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 4em;
 }
 
 .music {
-  background-image: url(/img/sarah2.jpg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
   color: white;
-  padding: 80px 0;
+  min-height: 100vh;
 }
 .music .musicBox {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 .music .musicBox .left {
   width: 10%;
@@ -112,33 +119,39 @@
   background-color: #a38e63;
   transition-duration: 0.2s;
 }
+.music .icon svg {
+  fill: white;
+}
 
 .videos {
-  background-image: url(/img/sara.jpg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
   color: white;
-  padding: 80px 0;
 }
 .videos .videosBox {
   text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+.videos .video {
+  width: 100%;
+}
+
 .gallery {
-  background-image: url(/img/sarah.jpeg);
+  background-image: url(/img/sara-2.jpeg);
   background-position: center;
   background-size: cover;
   color: white;
-  padding: 80px 0;
   min-height: 100vh;
 }
+
 .contacto {
-  background-image: url(/img/sara.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   color: white;
-  padding-top: 400px;
+  padding-top: 32em;
+  text-align: center;
 }
 .contacto .content {
   background-color: white;
@@ -152,7 +165,6 @@
 }
 .contacto .contactoBox .left {
   width: 50%;
-  text-align: right;
 }
 .contacto .contactoBox .right {
   width: 50%;
@@ -160,7 +172,7 @@
 .contacto .icons {
   display: flex;
   column-gap: 10px;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .contacto .icon {
   background-color: transparent;
@@ -177,7 +189,7 @@
   margin-bottom: 10px;
   transition-duration: 0.2s;
 }
-.icon svg {
+.contacto .icon svg {
   fill: #a38e63;
 }
 .contacto .right {
@@ -189,29 +201,8 @@
   text-decoration: none;
   color: black;
 }
-.footer {
-  background-image: url(/img/sarah.jpeg);
-  background-position: top;
-  background-attachment: fixed;
-  padding-top: 60px;
-  text-align: center;
-  padding-bottom: 100px;
-}
-.footer h1 {
-  color: #a38e63;
-  font-family: "Rozha One", serif;
-  margin: 10px 0;
-}
-.footer h2 {
-  background-color: transparent;
-  color: white;
-  text-align: center;
+.contacto .copyright {
+  margin: 20px 0;
   font-size: 0.8em;
-}
-.footer .icon svg {
-  cursor: pointer;
-  fill: white;
-}
-.footer .icon {
-  margin-bottom: 100px;
+  color: #a38e63;
 }
