@@ -225,6 +225,9 @@
 .music .iconsMobile {
   display: none;
 }
+.navMobile {
+  display: none;
+}
 
 @media only screen and (max-width: 1000px) {
   .navDesktop {
@@ -244,6 +247,12 @@
   }
   .navMobile .left {
     width: 40%;
+  }
+  .navMobile .left h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Playfair Display", serif;
   }
   .navMobile .center {
     width: 20%;
@@ -275,6 +284,27 @@
     fill: #a38e63;
     transition-duration: 0.2s;
   }
+  .navMobileScrolled h1 {
+    color: #a38e63 !important;
+  }
+  .navMobileScrolled svg {
+    fill: #a38e63 !important;
+  }
+  .menuMobile h1 {
+    color: #a38e63 !important;
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    text-align: center;
+  }
+  .menuMobile h2 {
+    color: #a38e63 !important;
+    font-family: "Playfair Display", serif;
+    font-size: 1em;
+  }
+  .menuMobile .link {
+    font-size: 2em;
+  }
+
   .menuMobile {
     position: fixed;
     top: 0;
@@ -290,7 +320,7 @@
     align-items: center;
   }
   .navMobileScrolled {
-    background-color: black;
+    background-color: white;
     transition-duration: 0.2s;
   }
   .header h1 {
