@@ -181,7 +181,7 @@ export default function Home() {
               </div>
               <div
                 className={styles.link}
-                onClick={() => goToSection("contact")}
+                onClick={() => goToSection("contacto")}
               >
                 Contacto
               </div>
