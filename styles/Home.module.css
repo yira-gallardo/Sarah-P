@@ -48,6 +48,7 @@
 }
 
 .header {
+  background-image: url(/img/sara-1.jpg);
   display: flex;
   flex-direction: column;
   color: white;
