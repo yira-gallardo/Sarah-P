@@ -156,12 +156,17 @@
   width: 100%;
 }
 
-.gallery {
-  background-image: url(/img/sara-2.jpeg);
+.gallery .galleryImg {
+  width: 100%;
+  height: 100vh;
   background-position: center;
   background-size: cover;
-  color: white;
-  min-height: 100vh;
+}
+.videos .videosGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  column-gap: 20px;
 }
 
 .contacto {
@@ -227,6 +232,12 @@
 }
 .navMobile {
   display: none;
+}
+.songBox {
+  display: none;
+}
+.songBox1 {
+  display: block;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -355,5 +366,13 @@
   .contacto .contactoBox .right {
     width: 100%;
     text-align: center;
+  }
+  .videos .videosGrid {
+    display: block;
+    padding: 20px;
+  }
+  .videos iframe {
+    height: 200px;
+    margin-bottom: 20px;
   }
 }

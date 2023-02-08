@@ -1,8 +1,13 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import { Parallax } from "react-parallax";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import styles from "@/styles/Home.module.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Home() {
   const image1 = "img/sara-1.jpg";
@@ -35,6 +40,16 @@ export default function Home() {
   const menuHide = () => {
     setMenuActive(false);
   };
+
+  // Escoger canción
+  const changeSong = (songBoxNumber) => {
+    const songBoxes = document.getElementsByClassName("hide-box");
+    for (let i = 0; i < songBoxes.length; i++) {
+      songBoxes[i].style.display = "none";
+    }
+    document.getElementById(songBoxNumber).style.display = "block";
+  };
+
   return (
     <>
       <Head>
@@ -173,7 +188,7 @@ export default function Home() {
             </div>
           </motion.div>
         )}
-        <Parallax bgImage={image1} strength={200}>
+        <Parallax bgImage={image1} strength={300}>
           <header className={styles.header} id="header">
             <motion.div
               initial={{ opacity: 0 }}
@@ -280,7 +295,10 @@ export default function Home() {
               >
                 <div className={styles.musicBox}>
                   <div className={styles.left}>
-                    <div className={styles.icon}>
+                    <div
+                      className={styles.icon}
+                      onClick={() => changeSong("song1")}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1.5em"
@@ -291,7 +309,10 @@ export default function Home() {
                         <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                       </svg>
                     </div>
-                    <div className={styles.icon}>
+                    <div
+                      className={styles.icon}
+                      onClick={() => changeSong("song2")}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1.5em"
@@ -308,7 +329,10 @@ export default function Home() {
                       <h2>Música</h2>
                     </div>
                     <div className={styles.iconsMobile}>
-                      <div className={styles.icon}>
+                      <div
+                        className={styles.icon}
+                        onClick={() => changeSong("song1")}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="1.5em"
@@ -319,7 +343,10 @@ export default function Home() {
                           <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                         </svg>
                       </div>
-                      <div className={styles.icon}>
+                      <div
+                        className={styles.icon}
+                        onClick={() => changeSong("song2")}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="1.5em"
@@ -332,13 +359,27 @@ export default function Home() {
                       </div>
                     </div>
                     <div className={styles.song}>
-                      <iframe
-                        style={{ borderRadius: "12px", border: "none" }}
-                        src="https://open.spotify.com/embed/track/38np4wcKIKTYrSe6LTvePF?utm_source=generator&theme=0"
-                        width="100%"
-                        height="380"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                      ></iframe>
+                      <div
+                        className={`hide-box ${styles.songBox} ${styles.songBox1}`}
+                        id="song1"
+                      >
+                        <iframe
+                          style={{ borderRadius: "12px", border: "none" }}
+                          src="https://open.spotify.com/embed/track/38np4wcKIKTYrSe6LTvePF?utm_source=generator&theme=0"
+                          width="100%"
+                          height="380"
+                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        ></iframe>
+                      </div>
+                      <div className={`hide-box ${styles.songBox}`} id="song2">
+                        <iframe
+                          style={{ borderRadius: "12px", border: "none" }}
+                          src="https://open.spotify.com/embed/track/3CNtL8X79WuENmcEOLpcKd?utm_source=generator"
+                          width="100%"
+                          height="380"
+                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        ></iframe>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -359,15 +400,27 @@ export default function Home() {
                   <div className={styles.heading}>
                     <h2>Videos</h2>
                   </div>
-                  <div className={styles.video}>
-                    <iframe
-                      width="70%"
-                      style={{ borderRadius: "12px", border: "none" }}
-                      height="500"
-                      src="https://www.youtube.com/embed/lypsnxDYa5s"
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    ></iframe>
+                  <div className={styles.videosGrid}>
+                    <div className={styles.video}>
+                      <iframe
+                        width="100%"
+                        style={{ borderRadius: "12px", border: "none" }}
+                        height="400"
+                        src="https://www.youtube.com/embed/lypsnxDYa5s"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      ></iframe>
+                    </div>
+                    <div className={styles.video}>
+                      <iframe
+                        width="100%"
+                        style={{ borderRadius: "12px", border: "none" }}
+                        height="400"
+                        src="https://www.youtube.com/embed/vZidozbzC1g"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -375,7 +428,57 @@ export default function Home() {
           </section>
         </Parallax>
         <section className={styles.gallery}>
-          <div></div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+          >
+            <SwiperSlide>
+              <div
+                className={styles.galleryImg}
+                style={{ backgroundImage: `url(${image1})` }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={styles.galleryImg}
+                style={{ backgroundImage: `url(${image2})` }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={styles.galleryImg}
+                style={{ backgroundImage: `url(${image3})` }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={styles.galleryImg}
+                style={{ backgroundImage: `url(${image4})` }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={styles.galleryImg}
+                style={{ backgroundImage: `url(${image5})` }}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={styles.galleryImg}
+                style={{ backgroundImage: `url(${image6})` }}
+              />
+            </SwiperSlide>
+          </Swiper>
         </section>
         <Parallax bgImage={image4} strength={200}>
           <footer className={styles.contacto} id="contacto">

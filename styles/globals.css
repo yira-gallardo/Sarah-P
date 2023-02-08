@@ -90,3 +90,14 @@ body {
   max-width: 1000px;
   margin: auto;
 }
+.swiper-button-next {
+  color: white !important;
+  margin-right: 30px !important;
+}
+.swiper-button-prev {
+  color: white !important;
+  margin-left: 30px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
