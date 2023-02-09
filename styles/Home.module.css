@@ -156,12 +156,6 @@
   width: 100%;
 }
 
-.gallery .galleryImg {
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-}
 .videos .videosGrid {
   display: grid;
   grid-template-columns: 50% 50%;
