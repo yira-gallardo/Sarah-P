@@ -2,12 +2,7 @@ import Head from "next/head";
 import { Parallax } from "react-parallax";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
 import styles from "@/styles/Home.module.css";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 export default function Home() {
   const image1 = "img/sara-1.jpg";
@@ -87,6 +82,23 @@ export default function Home() {
             </div>
             <div className={styles.right}>
               <div className={styles.socials}>
+                <div className={styles.social}>
+                  <a
+                    href="https://www.tiktok.com/@sarahportaluppi?_t=8ZitVHxM5Fm&_r=1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
+                    </svg>
+                  </a>
+                </div>
                 <div className={styles.social}>
                   <a
                     href="https://www.instagram.com/sarah_portaluppi/"
@@ -427,59 +439,7 @@ export default function Home() {
             </div>
           </section>
         </Parallax>
-        <section className={styles.gallery}>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            loop={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-          >
-            <SwiperSlide>
-              <div
-                className={styles.galleryImg}
-                style={{ backgroundImage: `url(${image1})` }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={styles.galleryImg}
-                style={{ backgroundImage: `url(${image2})` }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={styles.galleryImg}
-                style={{ backgroundImage: `url(${image3})` }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={styles.galleryImg}
-                style={{ backgroundImage: `url(${image4})` }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={styles.galleryImg}
-                style={{ backgroundImage: `url(${image5})` }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={styles.galleryImg}
-                style={{ backgroundImage: `url(${image6})` }}
-              />
-            </SwiperSlide>
-          </Swiper>
-        </section>
+
         <Parallax bgImage={image4} strength={200}>
           <footer className={styles.contacto} id="contacto">
             <div className={styles.content}>
@@ -490,6 +450,23 @@ export default function Home() {
                 <div className={styles.contactoBox}>
                   <div className={styles.left}>
                     <div className={styles.icons}>
+                      <div className={styles.icon}>
+                        <a
+                          href="https://www.tiktok.com/@sarahportaluppi?_t=8ZitVHxM5Fm&_r=1"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
+                          </svg>
+                        </a>
+                      </div>
                       <div className={styles.icon}>
                         <a
                           href="https://www.instagram.com/sarah_portaluppi/"
