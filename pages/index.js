@@ -181,11 +181,7 @@ export default function Home() {
             </div>
           </div>
         )}
-        <Parallax
-          bgImage={image1}
-          strength={300}
-          disabled={{ maxWidth: "1000px" }}
-        >
+        <Parallax bgImage={image1} strength={300}>
           <header className={styles.header} id="header">
             <motion.div
               initial={{ opacity: 0 }}
@@ -505,10 +501,10 @@ export default function Home() {
           </section>
         </Parallax>
         <Parallax bgImage={image4} strength={200}>
-          <footer className={styles.contacto} id="contacto">
+          <footer className={styles.contacto}>
             <div className={styles.content}>
               <div className="container">
-                <div className={styles.heading}>
+                <div className={styles.heading} id="contacto">
                   <h2>Contacto</h2>
                 </div>
                 <div className={styles.contactoBox}>

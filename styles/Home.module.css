@@ -396,4 +396,64 @@
   .contacto .icons {
     margin-bottom: 20px;
   }
+  .header {
+    display: block;
+    height: auto;
+    min-height: auto;
+    padding: 28em 20px 2em 20px;
+  }
+  .bio {
+    display: block;
+    height: auto;
+    min-height: auto;
+    padding: 2em 20px 2em 20px;
+  }
+  .music {
+    display: block;
+    height: auto;
+    min-height: auto;
+    padding: 2em 0 2em 0;
+  }
+  .music .musicBox .right {
+    width: 100%;
+  }
+  .music .musicBox .iconsMobile {
+    margin-bottom: 20px;
+  }
+  .music .musicBox {
+    display: block;
+    height: auto;
+    min-height: auto;
+    margin: auto;
+    padding: 2em 20px 2em 20px;
+    text-align: center;
+  }
+  .music h2 {
+    padding: 0;
+    margin: 0;
+  }
+  .videos {
+    display: block;
+    height: auto;
+    min-height: auto;
+    margin: auto;
+    padding: 2em 20px 2em 20px;
+    text-align: center;
+  }
+  .videos .videosBox {
+    display: block;
+    height: auto;
+    min-height: auto;
+    margin: auto;
+    padding: 2em 20px 2em 20px;
+    text-align: center;
+  }
+  .contacto {
+    display: block;
+    height: auto;
+    min-height: auto;
+    margin: auto;
+    padding: 16em 0 0 0;
+    text-align: center;
+  }
 }
