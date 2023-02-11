@@ -152,44 +152,40 @@ export default function Home() {
         )}
         {menuActive && (
           // MENU QUE APARECE
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.25 }}
-          >
-            <div className={styles.menuMobile}>
-              <div className={styles.link} onClick={() => goToSection("bio")}>
-                <div className={styles.logo}>
-                  <Image
-                    src={logo}
-                    alt="Sarah Portaluppi"
-                    width={1080}
-                    height={1080}
-                  />
-                </div>
-              </div>
-              <div className={styles.link} onClick={() => goToSection("bio")}>
-                Bio
-              </div>
-              <div className={styles.link} onClick={() => goToSection("music")}>
-                Música
-              </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("videos")}
-              >
-                Videos
-              </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("contacto")}
-              >
-                Contacto
+
+          <div className={styles.menuMobile}>
+            <div className={styles.link} onClick={() => goToSection("bio")}>
+              <div className={styles.logo}>
+                <Image
+                  src={logo}
+                  alt="Sarah Portaluppi"
+                  width={1080}
+                  height={1080}
+                />
               </div>
             </div>
-          </motion.div>
+            <div className={styles.link} onClick={() => goToSection("bio")}>
+              Bio
+            </div>
+            <div className={styles.link} onClick={() => goToSection("music")}>
+              Música
+            </div>
+            <div className={styles.link} onClick={() => goToSection("videos")}>
+              Videos
+            </div>
+            <div
+              className={styles.link}
+              onClick={() => goToSection("contacto")}
+            >
+              Contacto
+            </div>
+          </div>
         )}
-        <Parallax bgImage={image1} strength={300}>
+        <Parallax
+          bgImage={image1}
+          strength={300}
+          disabled={{ maxWidth: "1000px" }}
+        >
           <header className={styles.header} id="header">
             <motion.div
               initial={{ opacity: 0 }}
@@ -203,10 +199,7 @@ export default function Home() {
                   width={1080}
                   height={1080}
                 />
-                <div
-                  className={styles.icon}
-                  onClick={() => goToSection("menu")}
-                >
+                <div className={styles.icon} onClick={() => goToSection("bio")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="35"
