@@ -70,7 +70,6 @@
   background-image: url(/img/sara-1.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   display: none;
 }
 
@@ -105,7 +104,6 @@
   background-image: url(/img/sara-2.jpeg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   display: none;
 }
 
@@ -175,7 +173,6 @@
   background-image: url(/img/sara-5.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   display: none;
 }
 
@@ -264,7 +261,6 @@
   background-image: url(/img/sara-4.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   display: none;
 }
 

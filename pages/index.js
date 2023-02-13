@@ -42,9 +42,16 @@ export default function Home() {
     <>
       <Head>
         <title>Sarah Portaluppi</title>
-        <meta name="description" content="Sarah Portaluppi" />
+        <meta
+          name="description"
+          content="Website oficial - Música, videos y más"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          property="og:image"
+          content="https://sarah-p.vercel.app/img/meta.jpg"
+        />
       </Head>
       <main className={styles.main}>
         {!menuActive && (
