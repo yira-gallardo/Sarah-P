@@ -239,6 +239,13 @@ export default function Home() {
             <div
               href="/"
               className={styles.link}
+              onClick={() => goToSection("tienda")}
+            >
+              Tienda
+            </div>
+            <div
+              href="/"
+              className={styles.link}
               onClick={() => goToSection("contacto")}
             >
               Contacto
@@ -500,6 +507,14 @@ export default function Home() {
             </div>
           </section>
         </Parallax>
+        <section className={styles.tienda} id="tienda">
+          <div className="container">
+            <div className={styles.title}>
+              <h3>Tienda</h3>
+            </div>
+            <div className={styles.tienda}>Próximamente</div>
+          </div>
+        </section>
         <Parallax bgImage={image4} strength={200}>
           <footer className={styles.contacto}>
             <div className={styles.content}>

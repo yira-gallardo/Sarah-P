@@ -13,7 +13,6 @@
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 999;
 }
 .navDesktop .link {
   text-decoration: none;
@@ -164,7 +163,17 @@
   width: 100%;
   column-gap: 20px;
 }
-
+.tienda .title h3 {
+  font-size: 2em;
+  text-align: center;
+}
+.tienda {
+  background-color: #ea8f8c;
+  color: white;
+  padding: 5em 0;
+  font-size: 1.5em;
+  text-align: center;
+}
 .contacto {
   color: white;
   padding-top: 32em;
