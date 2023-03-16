@@ -65,6 +65,12 @@
   cursor: pointer;
   fill: white;
 }
+.headerMobile {
+  background-image: url(/img/sara-1.jpg);
+  background-position: center;
+  background-size: cover;
+  display: none;
+}
 
 .bio {
   color: white;
@@ -92,6 +98,12 @@
 }
 .bio .socials svg {
   fill: white;
+}
+.bioMobile {
+  background-image: url(/img/sara-2.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: none;
 }
 
 .music {
@@ -155,6 +167,12 @@
 }
 .videos .video {
   width: 100%;
+}
+.videosMobile {
+  background-image: url(/img/sara-5.jpg);
+  background-position: center;
+  background-size: cover;
+  display: none;
 }
 
 .videos .videosGrid {
@@ -248,6 +266,13 @@
   font-size: 0.8em;
   color: #aaa;
 }
+.contactoMobile {
+  background-image: url(/img/sara-4.jpg);
+  background-position: center;
+  background-size: cover;
+  display: none;
+}
+
 .music .iconsMobile {
   display: none;
 }
@@ -277,6 +302,19 @@
     align-items: center;
     transition-duration: 0.2s;
   }
+  .headerDesktop {
+    display: none !important;
+  }
+  .bioDesktop {
+    display: none !important;
+  }
+  .videosDesktop {
+    display: none !important;
+  }
+  .contactoDesktop {
+    display: none !important;
+  }
+
   .navMobile .left {
     width: 40%;
   }
