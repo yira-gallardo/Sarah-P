@@ -6,13 +6,17 @@
   color: #ea8f8c;
   font-family: "Damion", cursive;
 }
-
+.navDesktop .flex {
+  display: flex;
+  justify-content: space-between;
+}
 .navDesktop {
   text-align: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 999;
 }
 .navDesktop .link {
   text-decoration: none;
@@ -44,7 +48,27 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
+.navDesktop .right {
+  width: 25%;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.navDesktop .social {
+  display: inline-block;
+}
+.navDesktop .social a {
+  padding: 0 10px;
+}
+.navDesktop .social svg {
+  fill: #ea8f8c;
+  transition-duration: 0.2s;
+}
+.navDesktop .social a:hover svg {
+  fill: #a38e63;
+  transition-duration: 0.2s;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -65,13 +89,6 @@
   cursor: pointer;
   fill: white;
 }
-.headerMobile {
-  background-image: url(/img/sara-1.jpg);
-  background-position: center;
-  background-size: cover;
-  display: none;
-}
-
 .bio {
   color: white;
   min-height: 100vh;
@@ -98,12 +115,6 @@
 }
 .bio .socials svg {
   fill: white;
-}
-.bioMobile {
-  background-image: url(/img/sara-2.jpeg);
-  background-position: center;
-  background-size: cover;
-  display: none;
 }
 
 .music {
@@ -168,29 +179,11 @@
 .videos .video {
   width: 100%;
 }
-.videosMobile {
-  background-image: url(/img/sara-5.jpg);
-  background-position: center;
-  background-size: cover;
-  display: none;
-}
-
 .videos .videosGrid {
   display: grid;
   grid-template-columns: 50% 50%;
   width: 100%;
   column-gap: 20px;
-}
-.tienda .title h3 {
-  font-size: 2em;
-  text-align: center;
-}
-.tienda {
-  background-color: #ea8f8c;
-  color: white;
-  padding: 5em 0;
-  font-size: 1.5em;
-  text-align: center;
 }
 .contacto {
   color: white;
@@ -266,13 +259,6 @@
   font-size: 0.8em;
   color: #aaa;
 }
-.contactoMobile {
-  background-image: url(/img/sara-4.jpg);
-  background-position: center;
-  background-size: cover;
-  display: none;
-}
-
 .music .iconsMobile {
   display: none;
 }
@@ -302,19 +288,6 @@
     align-items: center;
     transition-duration: 0.2s;
   }
-  .headerDesktop {
-    display: none !important;
-  }
-  .bioDesktop {
-    display: none !important;
-  }
-  .videosDesktop {
-    display: none !important;
-  }
-  .contactoDesktop {
-    display: none !important;
-  }
-
   .navMobile .left {
     width: 40%;
   }
